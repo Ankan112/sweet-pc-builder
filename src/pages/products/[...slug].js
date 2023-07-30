@@ -5,7 +5,6 @@ import React from "react";
 const ProductDetailsPage = ({ data }) => {
   console.log(data);
   const id = useRouter();
-  //   console.log(id?.query?.slug);
   return (
     <div>
       <h1>product details page here! {id.query.slug}</h1>
@@ -31,7 +30,6 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params }) => {
   const { slug } = params;
   const id = slug[1];
-  //   const { id } = params;
   console.log(id);
   const res = await fetch(`http://localhost:3000/api/products/${id}`);
   const data = await res.json();

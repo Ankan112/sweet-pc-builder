@@ -4,11 +4,10 @@ import LatestProduct from "@/Components/LatestProduct";
 import RootLayout from "@/Components/Layouts/RootLayout";
 
 export default function Home({ data }) {
-  console.log(data.data.slice(0, 6));
   return (
     <>
       <Banner></Banner>
-      <LatestProduct></LatestProduct>
+      <LatestProduct data={data.data}></LatestProduct>
       <Category></Category>
     </>
   );
