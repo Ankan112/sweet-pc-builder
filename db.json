@@ -1,0 +1,369 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "image": "https://example.com/images/monitor2.jpg",
+      "productName": "24-inch Full HD Monitor",
+      "category": "Monitor",
+      "status": "Out of Stock",
+      "price": 199.99,
+      "description": "A 24-inch Full HD monitor with a sleek design and excellent color accuracy.",
+      "keyFeatures": {
+        "brand": "BrandY",
+        "model": "MNT456",
+        "specification": "1920x1080, TN panel",
+        "ports": "HDMI, VGA",
+        "type": "LED",
+        "refreshRate": "75Hz"
+      },
+      "individualRating": 4.8,
+      "averageRating": 4.7,
+      "reviews": 12
+    },
+    {
+      "id": "2",
+      "image": "https://example.com/images/storage1.jpg",
+      "productName": "1TB NVMe SSD",
+      "category": "Storage-Device",
+      "status": "In Stock",
+      "price": 199.99,
+      "description": "A high-speed 1TB NVMe SSD for fast data access and file transfer.",
+      "keyFeatures": {
+        "brand": "BrandA",
+        "model": "SSD123",
+        "specification": "1TB, M.2 NVMe",
+        "readSpeed": "3500 MB/s",
+        "writeSpeed": "3000 MB/s",
+        "formFactor": "M.2 2280"
+      },
+      "individualRating": 4.7,
+      "averageRating": 4.6,
+      "reviews": 10
+    },
+    {
+      "id": "3",
+      "image": "https://example.com/images/psu3.jpg",
+      "productName": "850W Fully-Modular PSU",
+      "category": "Power-Supply-Unit",
+      "status": "Out of Stock",
+      "price": 199.99,
+      "description": "A high-performance 850W fully-modular power supply for gaming enthusiasts.",
+      "keyFeatures": {
+        "brand": "BrandF",
+        "model": "PSU789",
+        "specification": "850W, 80+ Platinum",
+        "modular": true,
+        "fanSize": "135mm",
+        "protections": "Overload, Overvoltage, Short Circuit",
+        "certification": "80 Plus Platinum"
+      },
+      "individualRating": 4.9,
+      "averageRating": 4.8,
+      "reviews": 18
+    },
+    {
+      "id": "4",
+      "image": "https://example.com/images/ram2.jpg",
+      "productName": "32GB DDR4 RGB RAM",
+      "category": "RAM",
+      "status": "In Stock",
+      "price": 179.99,
+      "description": "A premium 32GB DDR4 RGB RAM module with customizable lighting effects.",
+      "keyFeatures": {
+        "brand": "BrandH",
+        "model": "RAM456",
+        "specification": "32GB DDR4, 3600MHz",
+        "voltage": "1.4V",
+        "casLatency": "CL18"
+      },
+      "individualRating": 4.8,
+      "averageRating": 4.7,
+      "reviews": 12
+    },
+    {
+      "id": "5",
+      "image": "https://example.com/images/motherboard3.jpg",
+      "productName": "Mini ITX Motherboard",
+      "category": "Motherboard",
+      "status": "In Stock",
+      "price": 149.99,
+      "description": "A compact Mini ITX motherboard suitable for space-constrained builds.",
+      "keyFeatures": {
+        "brand": "BrandL",
+        "model": "MB789",
+        "specification": "Mini ITX, Socket AM4",
+        "memorySlots": "2 DDR4 slots, max 64GB",
+        "ports": "USB 3.2, HDMI, DisplayPort",
+        "chipset": "AMD B550"
+      },
+      "individualRating": 4.9,
+      "averageRating": 4.8,
+      "reviews": 18
+    },
+    {
+      "id": "6",
+      "image": "https://example.com/images/processor3.jpg",
+      "productName": "Quad-core Low-power Processor",
+      "category": "Processor",
+      "status": "In Stock",
+      "price": 179.99,
+      "description": "A low-power quad-core processor suitable for energy-efficient builds.",
+      "keyFeatures": {
+        "brand": "BrandO",
+        "model": "CPU789",
+        "specification": "4 cores, 4 threads",
+        "socket": "AM4",
+        "clockSpeed": "2.9GHz (3.7GHz Max Boost)",
+        "cache": "6MB",
+        "thermalDesignPower": "65W"
+      },
+      "individualRating": 4.7,
+      "averageRating": 4.6,
+      "reviews": 11
+    },
+    {
+      "id": "7",
+      "image": "https://example.com/images/monitor1.jpg",
+      "productName": "27-inch 4K Monitor",
+      "category": "Monitor",
+      "status": "In Stock",
+      "price": 349.99,
+      "description": "A 27-inch 4K monitor with vibrant colors and a slim design.",
+      "keyFeatures": {
+        "brand": "BrandX",
+        "model": "MNT123",
+        "specification": "3840x2160, IPS panel",
+        "ports": "HDMI, DisplayPort",
+        "type": "LED",
+        "refreshRate": "60Hz"
+      },
+      "individualRating": 4.5,
+      "averageRating": 4.4,
+      "reviews": 15
+    },
+    {
+      "id": "8",
+      "image": "https://example.com/images/monitor3.jpg",
+      "productName": "32-inch Curved Gaming Monitor",
+      "category": "Monitor",
+      "status": "In Stock",
+      "price": 499.99,
+      "description": "A 32-inch curved gaming monitor with high refresh rate and AMD FreeSync support.",
+      "keyFeatures": {
+        "brand": "BrandZ",
+        "model": "MNT789",
+        "specification": "2560x1440, VA panel",
+        "ports": "HDMI, DisplayPort",
+        "type": "LED",
+        "refreshRate": "144Hz"
+      },
+      "individualRating": 4.6,
+      "averageRating": 4.5,
+      "reviews": 8
+    },
+
+    {
+      "id": "9",
+      "image": "https://example.com/images/storage2.jpg",
+      "productName": "2TB External HDD",
+      "category": "Storage Device",
+      "status": "In Stock",
+      "price": 99.99,
+      "description": "A reliable 2TB external HDD for data backup and storage.",
+      "keyFeatures": {
+        "brand": "BrandB",
+        "model": "HDD456",
+        "specification": "2TB, USB 3.0",
+        "transferSpeed": "5 Gbps",
+        "compatibility": "Windows, Mac"
+      },
+      "individualRating": 4.8,
+      "averageRating": 4.7,
+      "reviews": 12
+    },
+    {
+      "id": "10",
+      "image": "https://example.com/images/storage3.jpg",
+      "productName": "512GB SATA SSD",
+      "category": "Storage Device",
+      "status": "Out of Stock",
+      "price": 79.99,
+      "description": "A cost-effective 512GB SATA SSD for everyday computing tasks.",
+      "keyFeatures": {
+        "brand": "BrandC",
+        "model": "SSD789",
+        "specification": "512GB, 2.5-inch SATA",
+        "readSpeed": "550 MB/s",
+        "writeSpeed": "500 MB/s",
+        "formFactor": "2.5-inch"
+      },
+      "individualRating": 4.6,
+      "averageRating": 4.5,
+      "reviews": 14
+    },
+    {
+      "id": "11",
+      "image": "https://example.com/images/psu1.jpg",
+      "productName": "750W Modular PSU",
+      "category": "Power Supply Unit",
+      "status": "In Stock",
+      "price": 139.99,
+      "description": "A high-efficiency 750W modular power supply with silent operation.",
+      "keyFeatures": {
+        "brand": "BrandD",
+        "model": "PSU123",
+        "specification": "750W, 80+ Gold",
+        "modular": true,
+        "fanSize": "140mm",
+        "protections": "Overload, Overvoltage, Short Circuit",
+        "certification": "80 Plus Gold"
+      },
+      "individualRating": 4.7,
+      "averageRating": 4.6,
+      "reviews": 11
+    },
+    {
+      "id": "12",
+      "image": "https://example.com/images/psu2.jpg",
+      "productName": "650W Non-Modular PSU",
+      "category": "Power Supply Unit",
+      "status": "In Stock",
+      "price": 89.99,
+      "description": "A reliable 650W non-modular power supply for budget-friendly builds.",
+      "keyFeatures": {
+        "brand": "BrandE",
+        "model": "PSU456",
+        "specification": "650W, 80+ Bronze",
+        "modular": false,
+        "fanSize": "120mm",
+        "protections": "Overload, Overvoltage, Short Circuit",
+        "certification": "80 Plus Bronze"
+      },
+      "individualRating": 4.8,
+      "averageRating": 4.7,
+      "reviews": 9
+    },
+
+    {
+      "id": "13",
+      "image": "https://example.com/images/ram1.jpg",
+      "productName": "16GB DDR4 RAM",
+      "category": "RAM",
+      "status": "In Stock",
+      "price": 109.99,
+      "description": "A high-speed 16GB DDR4 RAM module for seamless multitasking.",
+      "keyFeatures": {
+        "brand": "BrandG",
+        "model": "RAM123",
+        "specification": "16GB DDR4, 3200MHz",
+        "voltage": "1.35V",
+        "casLatency": "CL16"
+      },
+      "individualRating": 4.7,
+      "averageRating": 4.6,
+      "reviews": 10
+    },
+
+    {
+      "id": "14",
+      "image": "https://example.com/images/ram3.jpg",
+      "productName": "8GB DDR3L RAM",
+      "category": "RAM",
+      "status": "Out of Stock",
+      "price": 79.99,
+      "description": "An energy-efficient 8GB DDR3L RAM module for low-power systems.",
+      "keyFeatures": {
+        "brand": "BrandI",
+        "model": "RAM789",
+        "specification": "8GB DDR3L, 1600MHz",
+        "voltage": "1.35V",
+        "casLatency": "CL11"
+      },
+      "individualRating": 4.8,
+      "averageRating": 4.7,
+      "reviews": 12
+    },
+    {
+      "id": "15",
+      "image": "https://example.com/images/motherboard1.jpg",
+      "productName": "ATX Gaming Motherboard",
+      "category": "Motherboard",
+      "status": "In Stock",
+      "price": 199.99,
+      "description": "A feature-packed ATX gaming motherboard with RGB lighting and multiple expansion slots.",
+      "keyFeatures": {
+        "brand": "BrandJ",
+        "model": "MB123",
+        "specification": "ATX, Socket AM4",
+        "memorySlots": "4 DDR4 slots, max 128GB",
+        "ports": "USB 3.2, HDMI, DisplayPort",
+        "chipset": "AMD X570",
+        "support": "CrossFire, SLI"
+      },
+      "individualRating": 4.7,
+      "averageRating": 4.6,
+      "reviews": 11
+    },
+    {
+      "id": "16",
+      "image": "https://example.com/images/motherboard2.jpg",
+      "productName": "Micro ATX Motherboard",
+      "category": "Motherboard",
+      "status": "Out of Stock",
+      "price": 129.99,
+      "description": "A compact Micro ATX motherboard with solid performance and ample connectivity.",
+      "keyFeatures": {
+        "brand": "BrandK",
+        "model": "MB456",
+        "specification": "Micro ATX, Socket LGA1200",
+        "memorySlots": "2 DDR4 slots, max 64GB",
+        "ports": "USB 3.2, HDMI, VGA",
+        "chipset": "Intel B560"
+      },
+      "individualRating": 4.8,
+      "averageRating": 4.7,
+      "reviews": 9
+    },
+
+    {
+      "id": "17",
+      "image": "https://example.com/images/processor1.jpg",
+      "productName": "Hexa-core Processor",
+      "category": "Processor",
+      "status": "In Stock",
+      "price": 299.99,
+      "description": "A powerful hexa-core processor for content creation and multitasking.",
+      "keyFeatures": {
+        "brand": "BrandM",
+        "model": "CPU123",
+        "specification": "6 cores, 12 threads",
+        "socket": "AM4",
+        "clockSpeed": "3.8GHz (4.4GHz Max Boost)",
+        "cache": "12MB"
+      },
+      "individualRating": 4.8,
+      "averageRating": 4.7,
+      "reviews": 10
+    },
+    {
+      "id": "18",
+      "image": "https://example.com/images/processor2.jpg",
+      "productName": "Octa-core Processor",
+      "category": "Processor",
+      "status": "Out of Stock",
+      "price": 399.99,
+      "description": "An octa-core processor for high-end gaming and rendering tasks.",
+      "keyFeatures": {
+        "brand": "BrandN",
+        "model": "CPU456",
+        "specification": "8 cores, 16 threads",
+        "socket": "LGA1200",
+        "clockSpeed": "3.6GHz (5.0GHz Max Turbo)",
+        "cache": "16MB"
+      },
+      "individualRating": 4.9,
+      "averageRating": 4.8,
+      "reviews": 12
+    }
+  ]
+}
