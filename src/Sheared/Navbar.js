@@ -1,9 +1,10 @@
 import Link from "next/link";
 import React, { useState } from "react";
+import { useSession, signOut } from "next-auth/react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const { data: session } = useSession();
   return (
     <nav className="relative bg-white shadow  dark:bg-gray-800">
       <div className="container  w-10/12 max-w-screen-xl py-3 mx-auto">
@@ -109,7 +110,23 @@ const Navbar = () => {
               >
                 PC Builder
               </Link>
-              {/* Additional menu items go here */}
+              {session?.user ? (
+                <>
+                  <button
+                    className="my-2 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:mx-4 md:my-0"
+                    onClick={() => signOut()}
+                  >
+                    Logout
+                  </button>
+                </>
+              ) : (
+                <Link
+                  className="my-2 text-sm leading-5 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline md:mx-4 md:my-0"
+                  href="/login"
+                >
+                  Login
+                </Link>
+              )}
             </div>
 
             {/* Search input on mobile screen */}
@@ -177,8 +194,6 @@ const Navbar = () => {
           >
             Monitor
           </Link>
-
-          {/* Additional menu items go here */}
         </div>
       </div>
     </nav>
