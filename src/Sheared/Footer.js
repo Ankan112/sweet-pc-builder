@@ -4,13 +4,7 @@ const Footer = () => {
       <footer className="bg-white dark:bg-gray-900">
         <div className="container px-6 py-8 mx-auto">
           <div className="flex flex-col items-center text-center">
-            <a href="#">
-              <img
-                className="w-auto h-7"
-                src="https://merakiui.com/images/full-logo.svg"
-                alt=""
-              />
-            </a>
+            <p className="text-xl font-semibold ">Sweet PC Builder</p>
 
             <div className="flex flex-wrap justify-center mt-6 -mx-4">
               <a
@@ -64,7 +58,7 @@ const Footer = () => {
 
           <div className="flex flex-col items-center sm:flex-row sm:justify-between">
             <p className="text-sm text-gray-500 dark:text-gray-300">
-              © Copyright 2021. All Rights Reserved.
+              © Copyright 2023 Sweet PC Builder. All Rights Reserved.
             </p>
 
             <div className="flex -mx-2">

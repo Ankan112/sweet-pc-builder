@@ -1,10 +1,8 @@
 import RootLayout from "@/Components/Layouts/RootLayout";
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 const ProductDetailsPage = ({ data }) => {
   console.log(data);
-  const categoryName = useRouter();
   return (
     <div className="container w-10/12 max-w-screen-xl  mx-auto">
       <div className="flex flex-wrap my-8">
@@ -16,11 +14,9 @@ const ProductDetailsPage = ({ data }) => {
               }`}
             >
               <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                <img
-                  className="lg:h-48 md:h-36 w-full object-cover object-center"
-                  src="https://dummyimage.com/720x400"
-                  alt="blog"
-                />
+                <div className="flex justify-center items-center">
+                  <img className="" src={product.image} alt="blog" />
+                </div>
                 <div className="p-6">
                   <h2 className="tracking-widest text-base title-font font-medium text-gray-400 mb-1">
                     {product.category}
@@ -60,6 +56,9 @@ const ProductDetailsPage = ({ data }) => {
                 </div>
               </div>
             </Link>
+            <button className="w-full bg-black text-white font-semibold text-lg py-2">
+              Add
+            </button>
           </div>
         ))}
       </div>
@@ -73,22 +72,22 @@ ProductDetailsPage.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
 };
 
-export const getStaticPaths = async () => {
-  const categories = [
-    "processor",
-    "monitor",
-    "ram",
-    "motherboard",
-    "storage-device",
-    "power-supply-unit",
-  ];
-  const paths = categories.map((category) => ({
-    params: { productCategory: category },
-  }));
-  return { paths, fallback: true };
-};
+// export const getStaticPaths = async () => {
+//   const categories = [
+//     "processor",
+//     "monitor",
+//     "ram",
+//     "motherboard",
+//     "storage-device",
+//     "power-supply-unit",
+//   ];
+//   const paths = categories.map((category) => ({
+//     params: { productCategory: category },
+//   }));
+//   return { paths, fallback: true };
+// };
 
-export const getStaticProps = async ({ params }) => {
+export const getServerSideProps = async ({ params }) => {
   const { productCategory } = params;
   console.log(productCategory);
   const res = await fetch(

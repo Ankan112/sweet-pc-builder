@@ -1,7 +1,6 @@
 import Link from "next/link";
 
 const LatestProduct = ({ data }) => {
-  console.log(data);
   return (
     <section className="text-gray-600 container w-10/12 max-w-screen-xl  mx-auto body-font">
       <div className="container px-5 py-24 mx-auto">
@@ -14,12 +13,10 @@ const LatestProduct = ({ data }) => {
           {data?.slice(0, 6).map((product) => (
             <div key={product._id} className="p-4 md:w-1/3">
               <Link href={`/products/${product.category.toLowerCase()}`}>
-                <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                  <img
-                    className="lg:h-48 md:h-36 w-full object-cover object-center"
-                    src="https://dummyimage.com/720x400"
-                    alt="blog"
-                  />
+                <div className="h-full  border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                  <div className="flex justify-center items-center">
+                    <img className="" src={product.image} alt="blog" />
+                  </div>
                   <div className="p-6">
                     <h2 className="tracking-widest text-base title-font font-medium text-gray-400 mb-1">
                       {product.category}

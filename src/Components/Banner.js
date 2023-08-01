@@ -1,3 +1,5 @@
+import banner from "../assets/monitor1.png";
+
 const Banner = () => {
   return (
     <div classNameName="">
@@ -8,7 +10,7 @@ const Banner = () => {
               <div className="lg:max-w-lg">
                 <h1 className="text-3xl font-semibold text-gray-800 dark:text-white lg:text-4xl">
                   Best place to choose <br /> your{" "}
-                  <span className="text-blue-500 ">clothes</span>
+                  <span className="text-blue-500 ">pc components</span>
                 </h1>
 
                 <p className="mt-3 text-gray-600 dark:text-gray-400">
@@ -26,8 +28,10 @@ const Banner = () => {
             <div className="flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-1/2">
               <img
                 className="w-full h-full lg:max-w-3xl"
-                src="https://merakiui.com/images/components/Catalogue-pana.svg"
-                alt="Catalogue-pana.svg"
+                src={
+                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAf1gjBAoXyiNfrn-RLbIFGTcUgx8iCkXG-Q&usqp=CAU"
+                }
+                alt="banner"
               />
             </div>
           </div>

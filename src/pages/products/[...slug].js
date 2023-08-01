@@ -6,11 +6,13 @@ const ProductDetailsPage = ({ data }) => {
   return (
     <div className="container w-10/12 max-w-screen-xl h-screen flex items-center  mx-auto">
       <div className="lg:w-4/5 mx-auto flex flex-wrap">
-        <img
-          alt="ecommerce"
-          className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
-          src="https://dummyimage.com/400x400"
-        />
+        <div className="flex justify-center items-center">
+          <img
+            className="lg:h-[400px] md:h-[400px] w-full object-cover object-center"
+            src={data?.data?.image}
+            alt="blog"
+          />
+        </div>
         <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
           <h2 className="text-sm title-font text-gray-500 tracking-widest">
             {data?.data?.category}
@@ -152,7 +154,7 @@ const ProductDetailsPage = ({ data }) => {
               ${data?.data?.price}
             </span>
             <button className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
-              Button
+              Buy Now
             </button>
             <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
               <svg
@@ -179,16 +181,16 @@ ProductDetailsPage.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
 };
 
-export const getStaticPaths = async () => {
-  const res = await fetch(`http://localhost:3000/api/products/`);
-  const data = await res.json();
-  const paths = data?.data?.map((product) => ({
-    params: { slug: [product._id] },
-  }));
-  return { paths, fallback: true };
-};
+// export const getStaticPaths = async () => {
+//   const res = await fetch(`http://localhost:3000/api/products/`);
+//   const data = await res.json();
+//   const paths = data?.data?.map((product) => ({
+//     params: { slug: [product._id] },
+//   }));
+//   return { paths, fallback: true };
+// };
 
-export const getStaticProps = async ({ params }) => {
+export const getServerSideProps = async ({ params }) => {
   const { slug } = params;
   const id = slug[1];
   const res = await fetch(`http://localhost:3000/api/products/${id}`);
