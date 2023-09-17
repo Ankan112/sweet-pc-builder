@@ -181,20 +181,28 @@ ProductDetailsPage.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
 };
 
-// export const getStaticPaths = async () => {
-//   const res = await fetch(`http://localhost:3000/api/products/`);
-//   const data = await res.json();
-//   const paths = data?.data?.map((product) => ({
-//     params: { slug: [product._id] },
-//   }));
-//   return { paths, fallback: true };
-// };
+export const getStaticPaths = async () => {
+  const res = await fetch("http://localhost:3000/api/products");
+  const data = await res.json();
 
-export const getServerSideProps = async ({ params }) => {
+  const paths = data?.data?.map((product) => ({
+    params: { slug: [product._id] },
+  }));
+
+  return {
+    paths,
+    fallback: true,
+  };
+};
+
+export const getStaticProps = async ({ params }) => {
+  console.log(params);
   const { slug } = params;
   const id = slug[1];
+  console.log(`id:${id}`);
   const res = await fetch(`http://localhost:3000/api/products/${id}`);
   const data = await res.json();
+  console.log(data);
   return {
     props: { data },
   };

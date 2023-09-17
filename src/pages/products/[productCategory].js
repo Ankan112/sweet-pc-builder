@@ -2,7 +2,6 @@ import RootLayout from "@/Components/Layouts/RootLayout";
 import Link from "next/link";
 
 const ProductDetailsPage = ({ data }) => {
-  console.log(data);
   return (
     <div className="container w-10/12 max-w-screen-xl  mx-auto">
       <div className="flex flex-wrap my-8">
@@ -72,24 +71,23 @@ ProductDetailsPage.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
 };
 
-// export const getStaticPaths = async () => {
-//   const categories = [
-//     "processor",
-//     "monitor",
-//     "ram",
-//     "motherboard",
-//     "storage-device",
-//     "power-supply-unit",
-//   ];
-//   const paths = categories.map((category) => ({
-//     params: { productCategory: category },
-//   }));
-//   return { paths, fallback: true };
-// };
+export const getStaticPaths = async () => {
+  const categories = [
+    "processor",
+    "monitor",
+    "ram",
+    "motherboard",
+    "storage-device",
+    "power-supply-unit",
+  ];
+  const paths = categories.map((category) => ({
+    params: { productCategory: category },
+  }));
+  return { paths, fallback: true };
+};
 
-export const getServerSideProps = async ({ params }) => {
+export const getStaticProps = async ({ params }) => {
   const { productCategory } = params;
-  console.log(productCategory);
   const res = await fetch(
     `http://localhost:3000/api/products/${productCategory}`
   );
