@@ -1,7 +1,16 @@
 import RootLayout from "@/Components/Layouts/RootLayout";
 import Link from "next/link";
+import { useDispatch } from "react-redux";
+import { addToBuildPage } from "../../../redux/features/productSlice";
+import { useRouter } from "next/router";
 
 const ProductDetailsPage = ({ data }) => {
+  const dispatch = useDispatch();
+  const router = useRouter();
+  const handleButton = (product) => {
+    dispatch(addToBuildPage(product));
+    router.push("/new-pc");
+  };
   return (
     <div className="container w-10/12 max-w-screen-xl  mx-auto">
       <div className="flex flex-wrap my-8">
@@ -55,8 +64,11 @@ const ProductDetailsPage = ({ data }) => {
                 </div>
               </div>
             </Link>
-            <button className="w-full bg-black text-white font-semibold text-lg py-2">
-              Add
+            <button
+              onClick={() => handleButton(product)}
+              className="w-full bg-black text-white font-semibold text-lg py-2"
+            >
+              Add To Build
             </button>
           </div>
         ))}
@@ -89,7 +101,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params }) => {
   const { productCategory } = params;
   const res = await fetch(
-    `http://localhost:3000/api/products/${productCategory}`
+    `https://sweet-pc-builder.vercel.app/api/products/${productCategory}`
   );
   const data = await res.json();
   return {

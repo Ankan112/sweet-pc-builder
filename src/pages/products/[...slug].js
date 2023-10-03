@@ -182,7 +182,7 @@ ProductDetailsPage.getLayout = function getLayout(page) {
 };
 
 export const getStaticPaths = async () => {
-  const res = await fetch("http://localhost:3000/api/products");
+  const res = await fetch("https://sweet-pc-builder.vercel.app/api/products");
   const data = await res.json();
 
   const paths = data?.data?.map((product) => ({
@@ -200,7 +200,9 @@ export const getStaticProps = async ({ params }) => {
   const { slug } = params;
   const id = slug[1];
   console.log(`id:${id}`);
-  const res = await fetch(`http://localhost:3000/api/products/${id}`);
+  const res = await fetch(
+    `https://sweet-pc-builder.vercel.app/api/products/${id}`
+  );
   const data = await res.json();
   console.log(data);
   return {
